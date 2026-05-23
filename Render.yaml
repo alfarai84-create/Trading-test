@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: Trading-test
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: CAPITAL_EMAIL
+        sync: false
+      - key: CAPITAL_PASSWORD
+        sync: false
+      - key: CAPITAL_API_KEY
+        sync: false
+      - key: PORT
+        value: 8080
